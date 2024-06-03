@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0582ca;
+        }
+        h1{
+            color: #ffffff;
+            font-style: italic;
+            text-transform: uppercase;
+            font-size: 25px;
+            text-align: center;
+            padding: 10px 0;
+            margin: 0 -20px 20px -20px;
+        }
+        label {
+        display: block;
+        margin-bottom: 5px;
+        text-align: left;
+        }
+        .form-container{
+            background-color: #ffffff;
+            padding: 10px;
+            width: 400px;
+            text-align: left;
+            margin: 10px auto 10px auto;
+        }
+        .gender-container{
+            display: flex;
+            margin: 10px auto 10px 40px;
+            align-items: center;
+            color: #9e9d9d;
+            font-size: 14px;
+        }
+        .gender-container label{
+            margin-right: 20px;
+        }
+        .gender-container input {
+            margin-right: 7px;
+        }
+        .gender-container .gender-option {
+            margin-right: 10px;
+        }
+        .btn-to-profile{
+            text-align: left;
+            margin: 50px auto 50px 40px;
+        }
+        button{
+            background-color: #0582ca;
+            padding: 9px;
+            color: #ffffff;
+            border: 1px solid #0582ca;
+            width: 60px;
+        }
+        input[type="text"],
+        input[type="tel"],
+        textarea {
+        width: 50%;
+        padding: 10px;
+        margin: 10px auto 10px 40px;
+        border: 1px solid #ccc;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-next{
+            text-align: left;
+            margin: 30px auto 50px 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multi steps form widget</h1>
+    <div class="form-container">
+     <form id="multi-step-form">
+        <div class="btn-to-profile">
+        <button type="button">Profile</button>
+        </div>
+        <input type="text" name="firstname" placeholder="First Name" required>
+        <input type="text" name="lastname" placeholder="Last Name" required>
+        <input type="tel" name="phonenumber" placeholder="Phone">
+        <div class="gender-container">
+        <label>Gender:</label>
+        <div class="gender-option">
+        <input type="radio" name="gender" value="female" /> Female
+        </div>
+        <div class="gender-option">
+        <input type="radio" name="gender" value="male" /> Male
+        </div>
+        </div>
+        <label for="address"></label>
+        <textarea name="address" cols="20" rows="4" placeholder="Address" required></textarea>
+        <div class="btn-next">
+        <button type="button" onclick="nextStep()">Next</button>
+        </div>
+     </form>
+    </div>
+</body>
+</html>
